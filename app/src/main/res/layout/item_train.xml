@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:padding="16dp">
+
+    <TextView
+        android:id="@+id/textViewCislo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Cislo"
+        android:textColor="@color/white"
+        android:textSize="16sp"
+        android:textStyle="bold"/>
+
+
+    <TextView
+        android:id="@+id/textViewDatum"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@id/textViewCislo"
+        android:layout_alignParentEnd="true"
+        android:textColor="@color/white"
+        android:text="Datum"
+        android:textSize="12sp"
+        android:textStyle="italic"/>
+
+    <TextView
+        android:id="@+id/textViewPoznamka"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/textViewCislo"
+        android:textColor="@color/white"
+        android:text="Poznamka"
+        android:textSize="14sp"/>
+
+</RelativeLayout>

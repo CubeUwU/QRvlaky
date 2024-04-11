@@ -1,0 +1,14 @@
+<resources>
+    <string name="app_name">QRvlaky</string>
+    <string-array name="tlacitka">
+        <item>Jedno cool na dveřích</item>
+        <item>Dvě zelená</item>
+        <item>Jedno na boku</item>
+    </string-array>
+    <string-array name="sedacky">
+        <item>Dole, v mezipatře a nahoře</item>
+        <item>Dole a v mezipatře</item>
+        <item>Jen dole</item>
+        <item>Žádné</item>
+    </string-array>
+</resources>
