@@ -10,6 +10,7 @@ import android.widget.TextView;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+// funkce pro zobrazení záznmu po kliknutí na něj v Vlaky.java
 public class VlakEdit extends AppCompatActivity {
     private TextView textViewCislo;
     private TextView textViewDatum;
@@ -55,6 +56,7 @@ public class VlakEdit extends AppCompatActivity {
         });
     }
 
+    // získání dat podle ID passnutého z Vlaky.java
     private void loadTrainDetails() {
         SQLiteDatabase database = dbHelper.getReadableDatabase();
 
@@ -90,6 +92,7 @@ public class VlakEdit extends AppCompatActivity {
         cursor.close();
     }
 
+    // mazání dat z databáze
     private void deleteTrain() {
         SQLiteDatabase database = dbHelper.getWritableDatabase();
         String selection = DatabaseHelper.COLUMN_ID + " = ?";

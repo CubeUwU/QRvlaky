@@ -15,10 +15,10 @@
         app:srcCompat="@drawable/cityelefant"
         android:background="@drawable/corners"
         android:backgroundTint="#4b5666"
+        android:scaleType="centerInside"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toStartOf="@+id/button3"
         app:layout_constraintStart_toStartOf="parent"
-
         app:layout_constraintVertical_bias="1.0"
         app:layout_constraintWidth_percent="0.25"
         app:layout_constraintHeight_percent="0.11" />
@@ -30,10 +30,10 @@
         app:srcCompat="@drawable/qr2b"
         android:background="@drawable/corners"
         android:backgroundTint="#4b5666"
+        android:scaleType="centerInside"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toStartOf="@+id/info"
         app:layout_constraintStart_toEndOf="@+id/scanner"
-
         app:layout_constraintVertical_bias="1.0"
         app:layout_constraintWidth_percent="0.25"
         app:layout_constraintHeight_percent="0.11" />
@@ -45,10 +45,10 @@
         app:srcCompat="@drawable/nerd"
         android:background="@drawable/corners"
         android:backgroundTint="#4b5666"
+        android:scaleType="centerInside"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toStartOf="@+id/neco"
         app:layout_constraintStart_toEndOf="@+id/button3"
-
         app:layout_constraintVertical_bias="1.0"
         app:layout_constraintWidth_percent="0.25"
         app:layout_constraintHeight_percent="0.11" />
@@ -60,10 +60,10 @@
         app:srcCompat="@drawable/necop"
         android:background="@drawable/corners"
         android:backgroundTint="#4b5666"
+        android:scaleType="centerInside"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@+id/info"
-
         app:layout_constraintVertical_bias="1.0"
         app:layout_constraintWidth_percent="0.25"
         app:layout_constraintHeight_percent="0.11" />
@@ -73,8 +73,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:backgroundTint="#4b5666"
-        android:text="Button"
-
+        android:text="Uložit"
         android:textColor="@color/white"
         app:layout_constraintBottom_toTopOf="@+id/button3"
         app:layout_constraintEnd_toEndOf="parent"

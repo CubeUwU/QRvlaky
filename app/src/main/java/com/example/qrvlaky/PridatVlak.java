@@ -18,6 +18,8 @@ import java.text.SimpleDateFormat;
 import java.util.Date;
 import java.util.Locale;
 
+// tato aktivita přidává vlaky do databáze
+
 public class PridatVlak extends AppCompatActivity {
     private DatabaseHelper dbHelper;
     private EditText editTextPoznamka;
@@ -40,6 +42,8 @@ public class PridatVlak extends AppCompatActivity {
         neco = findViewById(R.id.neco);
         info = findViewById(R.id.info);
 
+
+        // tlacitka fungují jako v MainActivity
         vlaky.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -78,7 +82,7 @@ public class PridatVlak extends AppCompatActivity {
         textView = findViewById(R.id.idvlaku);
         buttonOdeslat = findViewById(R.id.buttonOdeslat);
 
-        // Get the "cislo" passed from MainActivity
+        // Cislo a cislo pro sortovaní passnute z MainActivity je uloženo do stringu
         Bundle extras = getIntent().getExtras();
         if (extras != null) {
             cislo = extras.getString("cislo");
@@ -86,19 +90,21 @@ public class PridatVlak extends AppCompatActivity {
             textView.setText(cislo);
         }
 
+
+        // tato fuunkce vezme imput od uživatele a získá monentální datum a čas a pošle je do databáze pomocí funkce pro insert
         buttonOdeslat.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                // Retrieve current date and time
+
                 String currentDate = new SimpleDateFormat("dd.MM.yyyy HH:mm", Locale.getDefault()).format(new Date());
 
-                // Get the text from the EditText field
+
                 String poznamka = editTextPoznamka.getText().toString();
 
-                // Insert data into the database
+
                 insertDataIntoDatabase(cislo, poznamka, currentDate, sort);
 
-                // Finish the activity
+
                 Intent bintent = new Intent(PridatVlak.this, Vlaky.class);
                 startActivity(bintent);
                 finish();
@@ -109,15 +115,15 @@ public class PridatVlak extends AppCompatActivity {
     private void insertDataIntoDatabase(String cislo, String poznamka, String datum, String sort) {
         SQLiteDatabase database = dbHelper.getWritableDatabase();
 
-        // Check if the train number already exists in the database
+        // kontrola zda už nebylo toto číslo vlaku uloženo
         Cursor cursor = database.rawQuery("SELECT * FROM " + DatabaseHelper.TABLE_NAME + " WHERE " +
                 DatabaseHelper.COLUMN_CISLO + "=?", new String[]{cislo});
 
         if (cursor.getCount() > 0) {
-            // Train number already exists, show toast message
+
             Toast.makeText(this, "Train number already exists", Toast.LENGTH_SHORT).show();
         } else {
-            // Train number doesn't exist, insert new data into the database
+            // číslo vlaku je nové a toto insertne data do databáze
             ContentValues values = new ContentValues();
             values.put(DatabaseHelper.COLUMN_CISLO, cislo);
             values.put(DatabaseHelper.COLUMN_POZNAMKA, poznamka);

@@ -15,6 +15,7 @@ import androidx.recyclerview.widget.RecyclerView;
 import java.util.ArrayList;
 import java.util.List;
 
+// tato aktivita ukazuje vlaky uložené v databázi
 public class Vlaky extends AppCompatActivity implements TrainAdapter.OnItemClickListener {
         private RecyclerView recyclerView;
         private TrainAdapter adapter;
@@ -36,6 +37,7 @@ public class Vlaky extends AppCompatActivity implements TrainAdapter.OnItemClick
                 neco = findViewById(R.id.neco);
                 info = findViewById(R.id.info);
 
+                // tlacitka fungují jako v MainActivity
                 vlaky.setOnClickListener(new View.OnClickListener() {
                         @Override
                         public void onClick(View v) {
@@ -87,6 +89,7 @@ public class Vlaky extends AppCompatActivity implements TrainAdapter.OnItemClick
                 loadDataFromDatabase();
         }
 
+        // bere data z databáze a dává je do stringů které budou zobrazeny na obrazovce
         private void loadDataFromDatabase() {
                 SQLiteDatabase database = dbHelper.getReadableDatabase();
 
@@ -105,7 +108,7 @@ public class Vlaky extends AppCompatActivity implements TrainAdapter.OnItemClick
                         null,
                         null,
                         null,
-                        null
+                        DatabaseHelper.COLUMN_SORT
                 );
 
                 while (cursor.moveToNext()) {
@@ -122,6 +125,7 @@ public class Vlaky extends AppCompatActivity implements TrainAdapter.OnItemClick
                 adapter.notifyDataSetChanged();
         }
 
+        // po kliknutí odešle id do VlakEdit
         @Override
         public void onItemClick(int trainId) {
                 String arse = Integer.toString(trainId);

@@ -8,6 +8,8 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.ImageButton;
 
+
+// tato aktivita má pouze textview s informacema o aplikaci, tlačítka fungují stejně jako v MainActivity.
 public class Info extends AppCompatActivity {
     ImageButton scan_btn;
     ImageButton vlaky;

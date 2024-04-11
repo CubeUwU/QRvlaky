@@ -16,10 +16,10 @@
         app:srcCompat="@drawable/cityelefant"
         android:background="@drawable/corners"
         android:backgroundTint="#4b5666"
+        android:scaleType="centerInside"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toStartOf="@+id/button3"
         app:layout_constraintStart_toStartOf="parent"
-
         app:layout_constraintVertical_bias="1.0"
         app:layout_constraintWidth_percent="0.25"
         app:layout_constraintHeight_percent="0.11" />
@@ -31,10 +31,10 @@
         app:srcCompat="@drawable/qr2b"
         android:background="@drawable/corners"
         android:backgroundTint="#4b5666"
+        android:scaleType="centerInside"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toStartOf="@+id/info"
         app:layout_constraintStart_toEndOf="@+id/scanner"
-
         app:layout_constraintVertical_bias="1.0"
         app:layout_constraintWidth_percent="0.25"
         app:layout_constraintHeight_percent="0.11" />
@@ -46,10 +46,10 @@
         app:srcCompat="@drawable/nerd"
         android:background="@drawable/corners"
         android:backgroundTint="#4b5666"
+        android:scaleType="centerInside"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toStartOf="@+id/neco"
         app:layout_constraintStart_toEndOf="@+id/button3"
-
         app:layout_constraintVertical_bias="1.0"
         app:layout_constraintWidth_percent="0.25"
         app:layout_constraintHeight_percent="0.11" />
@@ -61,27 +61,29 @@
         app:srcCompat="@drawable/necop"
         android:background="@drawable/corners"
         android:backgroundTint="#4b5666"
+        android:scaleType="centerInside"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@+id/info"
-
         app:layout_constraintVertical_bias="1.0"
         app:layout_constraintWidth_percent="0.25"
         app:layout_constraintHeight_percent="0.11" />
 
     <TextView
         android:id="@+id/textView"
-        android:layout_width="374dp"
-        android:layout_height="262dp"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
         android:text="Výtejte v aplikaci QRvlaky. Tato aplikace funguje na bázy QR kódů nalezených v City Elefantech provozovaných firmou ČD. Tyto kódy můžeme ve vstupním koridoru většinou okolo dveří do dolního parta. Jiné QR kódy nebudou fungovat. Po naskenování QR kódu si k němu můžete připsat poznámku a uložit ho. Funguje to jako Pokémon GO ale pro City Elefanty. "
         android:textAlignment="textStart"
         android:textColor="@color/white"
         android:textSize="16sp"
         app:layout_constraintBottom_toTopOf="@+id/info"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.49"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.514" />
-
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintHorizontal_chainStyle="packed"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp"
+        />
 </androidx.constraintlayout.widget.ConstraintLayout>

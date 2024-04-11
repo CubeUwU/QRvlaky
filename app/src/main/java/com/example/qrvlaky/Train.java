@@ -1,6 +1,6 @@
 package com.example.qrvlaky;
 
-// Train.java
+// aktivita pro získávání dat z databáze
 public class Train {
     private int id;
     private String cislo;

@@ -10,6 +10,8 @@ import android.widget.EditText;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+// aktivita pro uložení nové poznámky do databáze podle získaného id z VlakyEdit.java
+
 public class VlakEditTrue extends AppCompatActivity {
     private EditText editTextPoznamka;
     private Button buttonSave;

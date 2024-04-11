@@ -1,6 +1,6 @@
 package com.example.qrvlaky;
 
-// TrainAdapter.java
+
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -12,6 +12,8 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import java.util.List;
 
+
+// funkce která ukazuje jak mají vypadat jednotlivé prvky vyobrazené v Vlaky.java a přidává jim funkce
 public class TrainAdapter extends RecyclerView.Adapter<TrainAdapter.TrainViewHolder> {
     private List<Train> trainList;
     private OnItemClickListener listener;
